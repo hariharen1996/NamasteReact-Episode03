@@ -1,0 +1,76 @@
+Assignment 03 - Laying the Foundation
+
+Topics
+
+1. JSX
+2. React.createElement vs JSX 
+3. Benefits of JSX 
+4. Behind the scenes of JSX 
+5. Babel and Parcel role in JSX 
+6. Components
+7. Functional Components 
+   => Composing Components 
+
+Assignment
+
+1. What is JSX?
+JSX is an HTML-like syntax and is known as javascript xml, which is easier to create react elements. Behind the scenes, the Babel from parser is used to transpile the jsx code into React.createElement and then convert into html and render it in UI.
+   => const heading = <span>Heading</span> 
+   => const heading = {
+    return <h1>Heading</h1>
+   }
+   => console.log(heading) => Represents an React Element 
+   => React.createElement = JSX 
+
+2. Superpowers of JSX?
+The JSX is easy to maintain and we can embed javascript inside the JSX using expressions ={}.
+It is faster and developer friendly.
+    => const heading = <h1>Heading</h1>
+    => const Container = (
+        <div>
+            <h2>{heading}</h2>
+        </div>
+    )
+
+3. Role of type attribute in script? What option can is choose there?
+    => The type attribute normally gives language of script or format of data
+    => It is used to add the type of scripts like React (module)
+    => <script type = "module" src="app.js"></script>
+    => <script type = "text/javascript" src="app.js"></script>
+
+4. {TitleComponent} vs {<TitleComponent />} vs {<TitleComponent></TitleComponent>} in JSX?
+    => {TitleComponent} - This is used to add an javascript variable inside an JSX 
+            const TitleComponent = 45000
+            const Total = () => (
+                {TitleComponent}
+            )
+    
+    => {<TitleComponent />} - This is used to add as an React Components inside the JSX, that is component inside an component which is known as composable components
+            const TitleComponent = () => {
+                return <h1>React Components</h1>
+            }
+            const Display = () => {
+                return(
+                    <div>
+                       <TitleComponent />
+                    </div>
+                )
+            }
+    
+    => {<TitleComponent></TitleComponent>} - This is used to add as an React Components in JSX, if we have any children elements to render in it 
+
+Coding
+
+1. Create an Nested header element using React.createElement(h1,h2,h3 inside a div with class "title")
+2. create same element using JSX 
+3. create a Functional component of same with JSX 
+4. Pass attribute into the tag in jsx
+5. Composition of component (add component inside another)
+6. {TitleComponent} vs {<TitleComponent />} vs {<TitleComponent></TitleComponent>} in JSX?
+
+=> Create a Header Component from scratch using Functional components in jsx 
+1. add logo on left
+2. add a search bar in middle
+3. add user icon on right
+4. add css to make it nice
+
